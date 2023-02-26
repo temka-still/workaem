@@ -1,0 +1,20 @@
+# Define a function to search for words in a given text
+def search_words(text, query):
+    # Split the text into words
+    words = text.split()
+    # Create an empty list to store the matching words
+    matches = []
+    # Loop through each word in the list
+    for word in words:
+        # Check if the query matches the word (case insensitive)
+        if query.lower() in word.lower():
+            # Add the word to the list of matches
+            matches.append(word)
+    # Return the list of matching words
+    return matches
+
+# Test the function with sample text and query
+text = "The quick brown fox jumps over the lazy dog."
+query = "o"
+matches = search_words(text, query)
+print(matches)  # Output: ['brown', 'fox', 'over', 'dog.']
